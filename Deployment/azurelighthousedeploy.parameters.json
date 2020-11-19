@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "mspOfferName": {
+      "value": "STELLR WVD Services"
+    },
+    "mspOfferDescription": {
+      "value": "WVD Managed Service"
+    },
+    "managedByTenantId": {
+      "value": "811011f1-fb0e-4bd8-a58b-9f8fef56c949"
+    },
+    "authorizations": {
+      "value": [
+
+        {
+          "principalId": "7fb2765f-8018-477b-b980-96b32ec4d941",
+          "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c",
+          "principalIdDisplayName": "WVD Admins"
+        },
+        {
+          "principalId": "7fb2765f-8018-477b-b980-96b32ec4d941",
+          "roleDefinitionId": "91c1777a-f3dc-4fae-b103-61d183457e46",
+          "principalIdDisplayName": "WVD Admins"
+        },
+        {
+          "principalId": "7fb2765f-8018-477b-b980-96b32ec4d941",
+          "roleDefinitionId": "749f88d5-cbae-40b8-bcfc-e573ddc772fa",
+          "principalIdDisplayName": "WVD Admins"
+        },
+        {
+          "principalId": "7fb2765f-8018-477b-b980-96b32ec4d941",
+          "roleDefinitionId": "92aaf0da-9dab-42b6-94a3-d43ce8d16293",
+          "principalIdDisplayName": "WVD Admins"
+        },
+        {
+          "principalId": "7fb2765f-8018-477b-b980-96b32ec4d941",
+          "principalIdDisplayName": "WVD Admins",
+          "roleDefinitionId": "18d7d88d-d35e-4fb5-a5c3-7773c20a72d9",
+          "delegatedRoleDefinitionIds": [
+            "b24988ac-6180-42a0-ab88-20f7382dd24c",
+            "92aaf0da-9dab-42b6-94a3-d43ce8d16293",
+            "0c867c2a-1d8c-454a-a3db-ab2ea1bdc8bb",
+            "a7264617-510b-434b-a828-9731dc254ea7"
+          ]
+        }
+      ]
+    },
+    "resourceGroups": {
+      "value": [
+        {
+          "rgName": "RG1",
+          "rgName": "RG2",
+        }
+
+      ]
+    }
+  }
+}
+  }
+}
