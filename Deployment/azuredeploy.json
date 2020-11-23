@@ -94,8 +94,8 @@
                 "registrationDefinitionName": "[parameters('mspOfferName')]",
                 "description": "[parameters('mspOfferDescription')]",
                 "managedByTenantId": "[parameters('managedByTenantId')]",
-                "authorizations": "[parameters('authorizations')]",
-                "eligibleAuthorizations": "[parameters('eligibleAuthorizations')]" 
+                "authorizations": "[parameters('authorizations')]"
+            
             }
         },
         {
