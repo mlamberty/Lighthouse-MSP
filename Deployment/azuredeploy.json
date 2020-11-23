@@ -73,8 +73,8 @@
                             "multiFactorAuthProvider": "Azure", 
                             "maximumActivationDuration": "PT8H" 
                         },
-                        "principalId": "ee8f6d35-15f2-4252-b1b8-591358e8a244", 
-                        "principalIdDisplayName": "PIM_Group",
+                        "principalId": "7fb2765f-8018-477b-b980-96b32ec4d941", 
+                        "principalIdDisplayName": "WVD Admins",
                         "roleDefinitionId": "36243c78-bf99-498c-9df9-86d9f8d28608" 
                         
                 }                    
