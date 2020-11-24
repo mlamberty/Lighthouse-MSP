@@ -71,13 +71,13 @@
             },
             "defaultValue": [
                 {
-                    "rgName": "[resourceGroup().name]"
+                    "rgName": "test1"
                 },
                 {
-                    "rgName": "[resourceGroup().name]"
+                    "rgName": "test2"
                 },
                 {
-                    "rgName": "[resourceGroup().name]"
+                    "rgName": "test3"
                 }
             ] 
         }             
