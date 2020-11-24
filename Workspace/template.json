@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "workspaces_desktop_monitoring_name": {
-            "defaultValue": "desktop-monitoring",
+            "defaultValue": "<Enter Your Desired WOrkspace Name>",
             "type": "String"
         }
     },
