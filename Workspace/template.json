@@ -15,8 +15,7 @@
             "name": "[parameters('workspaces_desktop_monitoring_name')]",
             "location": "eastus",
             "properties": {
-                "provisioningState": "Succeeded",
-                "sku": {
+                    "sku": {
                     "name": "pergb2018"
                 },
                 "retentionInDays": 30,
