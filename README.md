@@ -8,6 +8,9 @@ Files related to Azure Lighthouse deployment
 <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.png"/>
 </a>
 
+Enter any resource groups related to your Virtual Desktop environment in format:
+[{"rgName":"<Your RG Name>"},{"rgName":<Your RG Name>"}]
+
 =======
 
 Log Analytics Workspace
