@@ -1,1420 +1,508 @@
 {
-  "properties": {
-    "lenses": {
-      "0": {
-        "order": 0,
-        "parts": {
-          "0": {
-            "position": {
-              "x": 0,
-              "y": 0,
-              "colSpan": 4,
-              "rowSpan": 1
-            },
-            "metadata": {
-              "inputs": [],
-              "type": "Extension/HubsExtension/PartType/MarkdownPart",
-              "settings": {
-                "content": {
-                  "settings": {
-                    "content": "# Monitoring & Security",
-                    "title": "",
-                    "subtitle": ""
-                  }
-                }
-              }
-            }
-          },
-          "1": {
-            "position": {
-              "x": 4,
-              "y": 0,
-              "colSpan": 3,
-              "rowSpan": 4
-            },
-            "metadata": {
-              "inputs": [],
-              "type": "Extension/HubsExtension/PartType/MarkdownPart",
-              "settings": {
-                "content": {
-                  "settings": {
-                    "content": "# Customers\r\n\r\n### Subscriptions\r\n[ Matt-MPN](https://portal.azure.com/#@iursnxpss.onmicrosoft.com/resource/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b/overview)\r\n\r\n[Mike-WVD](https://portal.azure.com/#@iursnxpss.onmicrosoft.com/resource/subscriptions/5b8010bc-870e-4264-824e-694dafdf89ee/overview)\r\n\r\n[Paul-LIghthouse](https://portal.azure.com/#@iursnxpss.onmicrosoft.com/resource/subscriptions/83dffd89-5cae-4c3b-8bd7-1e7122c504e8/overview)",
-                    "title": "",
-                    "subtitle": ""
-                  }
-                }
-              }
-            }
-          },
-          "2": {
-            "position": {
-              "x": 7,
-              "y": 0,
-              "colSpan": 4,
-              "rowSpan": 1
-            },
-            "metadata": {
-              "inputs": [],
-              "type": "Extension/HubsExtension/PartType/MarkdownPart",
-              "settings": {
-                "content": {
-                  "settings": {
-                    "content": "# Management Overview",
-                    "title": "",
-                    "subtitle": ""
-                  }
-                }
-              }
-            }
-          },
-          "3": {
-            "position": {
-              "x": 11,
-              "y": 0,
-              "colSpan": 4,
-              "rowSpan": 1
-            },
-            "metadata": {
-              "inputs": [],
-              "type": "Extension/HubsExtension/PartType/MarkdownPart",
-              "settings": {
-                "content": {
-                  "settings": {
-                    "content": "# Automation & Configuration\n",
-                    "title": "",
-                    "subtitle": ""
-                  }
-                }
-              }
-            }
-          },
-          "4": {
-            "position": {
-              "x": 15,
-              "y": 0,
-              "colSpan": 4,
-              "rowSpan": 2
-            },
-            "metadata": {
-              "inputs": [
-                {
-                  "name": "tagName",
-                  "value": "ManagedByMsp",
-                  "isOptional": true
-                },
-                {
-                  "name": "tagKey",
-                  "isOptional": true
-                },
-                {
-                  "name": "tagValue",
-                  "value": "Yes"
-                }
-              ],
-              "type": "Extension/HubsExtension/PartType/ResourcesWithTagBladePinnedPart"
-            }
-          },
-          "5": {
-            "position": {
-              "x": 0,
-              "y": 1,
-              "colSpan": 2,
-              "rowSpan": 2
-            },
-            "metadata": {
-              "inputs": [
-                {
-                  "name": "id",
-                  "value": "/subscriptions/5e596d15-8681-402b-9cd4-3ac315f83932/resourceGroups/RG_LIghtouse/providers/Microsoft.OperationalInsights/workspaces/desktop-monitoring"
-                }
-              ],
-              "type": "Extension/Microsoft_OperationsManagementSuite_Workspace/PartType/WorkspacePart",
-              "asset": {
-                "idInputName": "id",
-                "type": "Workspace"
-              },
-              "defaultMenuItemId": "Overview"
-            }
-          },
-          "6": {
-            "position": {
-              "x": 2,
-              "y": 1,
-              "colSpan": 2,
-              "rowSpan": 2
-            },
-            "metadata": {
-              "inputs": [
-                {
-                  "name": "demoMode",
-                  "isOptional": true
-                },
-                {
-                  "name": "initiator"
-                },
-                {
-                  "name": "scope",
-                  "isOptional": true
-                },
-                {
-                  "name": "cachedResourceType",
-                  "isOptional": true
-                },
-                {
-                  "name": "workspaceResourceId",
-                  "isOptional": true
-                },
-                {
-                  "name": "query",
-                  "isOptional": true
-                },
-                {
-                  "name": "isQueryBase64Compressed",
-                  "isOptional": true
-                },
-                {
-                  "name": "timespanInIsoFormat",
-                  "isOptional": true
-                },
-                {
-                  "name": "isQueryEditorVisible",
-                  "isOptional": true
-                },
-                {
-                  "name": "environment",
-                  "isOptional": true
-                },
-                {
-                  "name": "telemetryInfo",
-                  "isOptional": true
-                }
-              ],
-              "type": "Extension/Microsoft_OperationsManagementSuite_Workspace/PartType/AnalyticsPart",
-              "defaultMenuItemId": "logs"
-            }
-          },
-          "7": {
-            "position": {
-              "x": 7,
-              "y": 1,
-              "colSpan": 4,
-              "rowSpan": 2
-            },
-            "metadata": {
-              "inputs": [],
-              "type": "Extension/HubsExtension/PartType/ArmExplorerStartPart"
-            }
-          },
-          "8": {
-            "position": {
-              "x": 11,
-              "y": 1,
-              "colSpan": 4,
-              "rowSpan": 1
-            },
-            "metadata": {
-              "inputs": [],
-              "type": "Extension/HubsExtension/PartType/MarkdownPart",
-              "settings": {
-                "content": {
-                  "settings": {
-                    "content": "[![Launch Cloud Shell](https://shell.azure.com/images/launchcloudshell.png \"Launch Cloud Shell\")](https://shell.azure.com)",
-                    "title": "",
-                    "subtitle": ""
-                  }
-                }
-              }
-            }
-          },
-          "9": {
-            "position": {
-              "x": 11,
-              "y": 2,
-              "colSpan": 4,
-              "rowSpan": 2
-            },
-            "metadata": {
-              "inputs": [
-                {
-                  "name": "workspaceId",
-                  "value": "/subscriptions/5e596d15-8681-402b-9cd4-3ac315f83932/resourceGroups/RG_LIghtouse/providers/Microsoft.OperationalInsights/workspaces/desktop-monitoring",
-                  "isOptional": true
-                },
-                {
-                  "name": "automationAccountResourceId",
-                  "value": "",
-                  "isOptional": true
-                },
-                {
-                  "name": "virtualMachineResourceId",
-                  "value": "",
-                  "isOptional": true
-                },
-                {
-                  "name": "virtualMachineUniqueId",
-                  "value": "",
-                  "isOptional": true
-                },
-                {
-                  "name": "osType",
-                  "value": "",
-                  "isOptional": true
-                },
-                {
-                  "name": "virtualMachineImageReference",
-                  "isOptional": true
-                },
-                {
-                  "name": "virtualMachineSupplementalInformation",
-                  "isOptional": true
-                }
-              ],
-              "type": "Extension/Microsoft_Azure_Automation/PartType/MultiVMUpdateManagementBladePinnedPart"
-            }
-          },
-          "10": {
-            "position": {
-              "x": 0,
-              "y": 3,
-              "colSpan": 4,
-              "rowSpan": 3
-            },
-            "metadata": {
-              "inputs": [
-                {
-                  "name": "queryInputs",
-                  "value": {
-                    "subscriptions": "/subscriptions/5e596d15-8681-402b-9cd4-3ac315f83932",
-                    "regions": "",
-                    "services": "",
-                    "resourceGroupId": "all",
-                    "timeSpan": "5",
-                    "startTime": "2018-06-23T12:30:36.897Z",
-                    "endTime": "2018-06-26T12:30:36.897Z",
-                    "queryName": "WW",
-                    "queryId": "55839c4b-d749-4b1c-b862-d7c94fdcd3d9",
-                    "loadFromCache": false,
-                    "communicationType": "incident",
-                    "statusFilter": "active"
-                  }
-                }
-              ],
-              "type": "Extension/Microsoft_Azure_Health/PartType/ServiceIssuesTilePart"
-            }
-          },
-          "11": {
-            "position": {
-              "x": 7,
-              "y": 3,
-              "colSpan": 4,
-              "rowSpan": 4
-            },
-            "metadata": {
-              "inputs": [
-                {
-                  "name": "resourceType",
-                  "value": "Microsoft.Compute/VirtualMachines",
-                  "isOptional": true
-                },
-                {
-                  "name": "filter",
-                  "isOptional": true
-                },
-                {
-                  "name": "scope",
-                  "isOptional": true
-                },
-                {
-                  "name": "kind",
-                  "isOptional": true
-                }
-              ],
-              "type": "Extension/HubsExtension/PartType/BrowseBaseResourcesPinnedPart"
-            }
-          },
-          "12": {
-            "position": {
-              "x": 4,
-              "y": 4,
-              "colSpan": 2,
-              "rowSpan": 1
-            },
-            "metadata": {
-              "inputs": [],
-              "type": "Extension/Microsoft_Azure_CustomerHub/PartType/MyCustomersPart",
-              "defaultMenuItemId": "customers"
-            }
-          },
-          "13": {
-            "position": {
-              "x": 0,
-              "y": 6,
-              "colSpan": 2,
-              "rowSpan": 1
-            },
-            "metadata": {
-              "inputs": [
-                {
-                  "name": "queryInputs",
-                  "isOptional": true
-                }
-              ],
-              "type": "Extension/Microsoft_Azure_Monitoring/PartType/DiagnosticsLogsBladePinnedPart",
-              "defaultMenuItemId": "diagnosticsLogs"
-            }
-          },
-          "14": {
-            "position": {
-              "x": 2,
-              "y": 6,
-              "colSpan": 2,
-              "rowSpan": 1
-            },
-            "metadata": {
-              "inputs": [
-                {
-                  "name": "queryInputs",
-                  "value": null,
-                  "isOptional": true
-                },
-                {
-                  "name": "targetResourceIds",
-                  "isOptional": true
-                },
-                {
-                  "name": "options",
-                  "isOptional": true
-                }
-              ],
-              "type": "Extension/Microsoft_Azure_Monitoring/PartType/AlertsSummaryPart",
-              "defaultMenuItemId": "alerts"
-            }
-          },
-          "15": {
-            "position": {
-              "x": 0,
-              "y": 7,
-              "colSpan": 2,
-              "rowSpan": 1
-            },
-            "metadata": {
-              "inputs": [
-                {
-                  "name": "inferredBladePinPartInputs.menuIdToOpen",
-                  "isOptional": true
-                },
-                {
-                  "name": "inferredBladePinPartInputs.subscriptionId",
-                  "isOptional": true
-                }
-              ],
-              "type": "Extension/Microsoft_Azure_Security/PartType/InferredBladePinPartSecurityMenuBlade",
-              "defaultMenuItemId": "0"
-            }
-          },
-          "16": {
-            "position": {
-              "x": 2,
-              "y": 7,
-              "colSpan": 2,
-              "rowSpan": 1
-            },
-            "metadata": {
-              "inputs": [],
-              "type": "Extension/Microsoft_Azure_Expert/PartType/AzureAdvisorPart"
-            }
-          },
-          "17": {
-            "position": {
-              "x": 6,
-              "y": 7,
-              "colSpan": 2,
-              "rowSpan": 2
-            },
-            "metadata": {
-              "inputs": [
-                {
-                  "name": "id",
-                  "value": "/subscriptions/5e596d15-8681-402b-9cd4-3ac315f83932/resourceGroups/RG_LIghtouse/providers/Microsoft.Automation/automationAccounts/wvdscale"
-                }
-              ],
-              "type": "Extension/Microsoft_Azure_Automation/PartType/AccountDashboardBladePinnedPart",
-              "defaultMenuItemId": "overview"
-            }
-          },
-          "18": {
-            "position": {
-              "x": 0,
-              "y": 8,
-              "colSpan": 2,
-              "rowSpan": 1
-            },
-            "metadata": {
-              "inputs": [
-                {
-                  "name": "ComponentId",
-                  "value": {
-                    "Name": "Azure Monitor",
-                    "ResourceId": "Azure Monitor",
-                    "LinkedApplicationType": -2
-                  }
-                },
-                {
-                  "name": "ResourceIds",
-                  "value": [
-                    "Azure Monitor"
-                  ],
-                  "isOptional": true
-                },
-                {
-                  "name": "Type",
-                  "value": "workbook",
-                  "isOptional": true
-                },
-                {
-                  "name": "TimeContext",
-                  "isOptional": true
-                },
-                {
-                  "name": "ConfigurationId",
-                  "value": "/subscriptions/7cd5188a-c3e2-4043-a190-4609487ad553/resourcegroups/stellrmsp-wvd-rg/providers/microsoft.insights/workbooks/7bc583e6-b7d6-4eeb-9da5-4ce05c5a7834",
-                  "isOptional": true
-                },
-                {
-                  "name": "ViewerMode",
-                  "value": false,
-                  "isOptional": true
-                },
-                {
-                  "name": "GalleryResourceType",
-                  "value": "Azure Monitor",
-                  "isOptional": true
-                },
-                {
-                  "name": "NotebookParams",
-                  "isOptional": true
-                },
-                {
-                  "name": "Location",
-                  "value": "eastus",
-                  "isOptional": true
-                },
-                {
-                  "name": "Version",
-                  "value": "1.0",
-                  "isOptional": true
-                }
-              ],
-              "type": "Extension/AppInsightsExtension/PartType/NotebookPinnedPart",
-              "viewState": {
-                "content": {
-                  "configurationId": "/subscriptions/7cd5188a-c3e2-4043-a190-4609487ad553/resourcegroups/stellrmsp-wvd-rg/providers/microsoft.insights/workbooks/7bc583e6-b7d6-4eeb-9da5-4ce05c5a7834"
-                }
-              }
-            }
-          },
-          "19": {
-            "position": {
-              "x": 2,
-              "y": 8,
-              "colSpan": 2,
-              "rowSpan": 1
-            },
-            "metadata": {
-              "inputs": [
-                {
-                  "name": "ResourceId",
-                  "isOptional": true
-                },
-                {
-                  "name": "TimeContext",
-                  "isOptional": true
-                },
-                {
-                  "name": "ChartDefinition",
-                  "isOptional": true
-                },
-                {
-                  "name": "Version",
-                  "value": "1.0"
-                },
-                {
-                  "name": "AppDefinition",
-                  "isOptional": true
-                }
-              ],
-              "type": "Extension/Microsoft_Azure_Monitoring/PartType/MetricsBladeV3PinnedPart",
-              "defaultMenuItemId": "appInsightsMetrics"
-            }
-          },
-          "20": {
-            "position": {
-              "x": 4,
-              "y": 12,
-              "colSpan": 2,
-              "rowSpan": 1
-            },
-            "metadata": {
-              "inputs": [
-                {
-                  "name": "ComponentId",
-                  "value": {
-                    "Name": "Azure Monitor",
-                    "ResourceId": "Azure Monitor",
-                    "LinkedApplicationType": -2
-                  }
-                },
-                {
-                  "name": "ResourceIds",
-                  "value": [
-                    "Azure Monitor"
-                  ],
-                  "isOptional": true
-                },
-                {
-                  "name": "Type",
-                  "value": "workbook",
-                  "isOptional": true
-                },
-                {
-                  "name": "TimeContext",
-                  "isOptional": true
-                },
-                {
-                  "name": "ConfigurationId",
-                  "value": "/subscriptions/7cd5188a-c3e2-4043-a190-4609487ad553/resourcegroups/stellrmsp-wvd-rg/providers/microsoft.insights/workbooks/7bc583e6-b7d6-4eeb-9da5-4ce05c5a7834",
-                  "isOptional": true
-                },
-                {
-                  "name": "ViewerMode",
-                  "value": false,
-                  "isOptional": true
-                },
-                {
-                  "name": "GalleryResourceType",
-                  "value": "Azure Monitor",
-                  "isOptional": true
-                },
-                {
-                  "name": "NotebookParams",
-                  "isOptional": true
-                },
-                {
-                  "name": "Location",
-                  "value": "eastus",
-                  "isOptional": true
-                },
-                {
-                  "name": "Version",
-                  "value": "1.0",
-                  "isOptional": true
-                }
-              ],
-              "type": "Extension/AppInsightsExtension/PartType/NotebookPinnedPart",
-              "viewState": {
-                "content": {
-                  "configurationId": "/subscriptions/7cd5188a-c3e2-4043-a190-4609487ad553/resourcegroups/stellrmsp-wvd-rg/providers/microsoft.insights/workbooks/7bc583e6-b7d6-4eeb-9da5-4ce05c5a7834"
-                }
-              }
-            }
-          },
-          "21": {
-            "position": {
-              "x": 0,
-              "y": 13,
-              "colSpan": 6,
-              "rowSpan": 4
-            },
-            "metadata": {
-              "inputs": [
-                {
-                  "name": "ComponentId",
-                  "value": "Azure Monitor",
-                  "isOptional": true
-                },
-                {
-                  "name": "TimeContext",
-                  "value": null,
-                  "isOptional": true
-                },
-                {
-                  "name": "ResourceIds",
-                  "value": [
-                    "Azure Monitor"
-                  ],
-                  "isOptional": true
-                },
-                {
-                  "name": "ConfigurationId",
-                  "value": "/subscriptions/7cd5188a-c3e2-4043-a190-4609487ad553/resourcegroups/stellrmsp-wvd-rg/providers/microsoft.insights/workbooks/7bc583e6-b7d6-4eeb-9da5-4ce05c5a7834",
-                  "isOptional": true
-                },
-                {
-                  "name": "Type",
-                  "value": "workbook",
-                  "isOptional": true
-                },
-                {
-                  "name": "GalleryResourceType",
-                  "value": "Azure Monitor",
-                  "isOptional": true
-                },
-                {
-                  "name": "PinName",
-                  "value": "WVD",
-                  "isOptional": true
-                },
-                {
-                  "name": "StepSettings",
-                  "value": "{\"version\":\"KqlItem/1.0\",\"query\":\"WVDErrors\\r\\n{wvd_displayserviceerrors}\\r\\n| parse _ResourceId with * \\\"/hostpools/\\\" HostPoolName\\r\\n| where HostPoolName like ('{HostPool}')\\r\\n| summarize usercount = count(UserName) by CodeSymbolic, CorrelationId, TimeGenerated\\r\\n| project CodeSymbolic, usercount, CorrelationId, TimeGenerated\\r\\n| sort by usercount desc\",\"size\":1,\"title\":\"WVD Errors\",\"noDataMessage\":\"No errors detected in the selected time period\",\"timeContext\":{\"durationMs\":2592000000},\"timeContextFromParameter\":\"TimeRange\",\"queryType\":0,\"resourceType\":\"microsoft.operationalinsights/workspaces\",\"crossComponentResources\":[\"{Workspace}\"],\"visualization\":\"piechart\"}",
-                  "isOptional": true
-                },
-                {
-                  "name": "ParameterValues",
-                  "value": {
-                    "Subscription": {
-                      "type": 6,
-                      "value": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b",
-                      "formattedValue": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b",
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "Visual Studio Enterprise Subscription – MPN - Matt",
-                      "displayName": "Subscription"
-                    },
-                    "SubscriptionID": {
-                      "type": 6,
-                      "value": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b",
-                      "formattedValue": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b",
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "Visual Studio Enterprise Subscription – MPN - Matt",
-                      "displayName": "SubscriptionID"
-                    },
-                    "Workspace": {
-                      "type": 5,
-                      "value": [
-                        "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b/resourceGroups/WVD-Test/providers/Microsoft.OperationalInsights/workspaces/desktop-monitoring"
-                      ],
-                      "formattedValue": "'/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b/resourceGroups/WVD-Test/providers/Microsoft.OperationalInsights/workspaces/desktop-monitoring'",
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "desktop-monitoring",
-                      "displayName": "Log Analytics Workspace"
-                    },
-                    "ResourceGroup": {
-                      "type": 5,
-                      "value": null,
-                      "formattedValue": null,
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "<unset>",
-                      "displayName": "ResourceGroup"
-                    },
-                    "HostPool": {
-                      "type": 5,
-                      "value": null,
-                      "formattedValue": null,
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "<unset>",
-                      "displayName": "HostPool"
-                    },
-                    "WVDHosts": {
-                      "type": 5,
-                      "formattedValue": null,
-                      "isPending": false,
-                      "isWaiting": true,
-                      "isFailed": false,
-                      "labelValue": "<query pending>",
-                      "displayName": "WVDHosts"
-                    },
-                    "TimeRange": {
-                      "type": 4,
-                      "value": {
-                        "durationMs": 2592000000,
-                        "createdTime": "2020-11-25T20:36:53.727Z",
-                        "isInitialTime": false,
-                        "grain": 1,
-                        "useDashboardTimeRange": false
-                      },
-                      "formattedValue": "Last 30 days",
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "Last 30 days",
-                      "displayName": "TimeRange"
-                    },
-                    "selectedTab": {
-                      "type": 1,
-                      "value": "SessionDiagnostics",
-                      "formattedValue": "SessionDiagnostics"
-                    },
-                    "wvd_displayserviceerrors": {
-                      "type": 2,
-                      "value": "| where ServiceError == 'False'",
-                      "formattedValue": "| where ServiceError == 'False'",
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "False",
-                      "displayName": "Display WVD Service Backend Errors?"
-                    }
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "Location",
-                  "value": "eastus",
-                  "isOptional": true
-                }
-              ],
-              "type": "Extension/AppInsightsExtension/PartType/PinnedNotebookQueryPart"
-            }
-          },
-          "22": {
-            "position": {
-              "x": 0,
-              "y": 17,
-              "colSpan": 6,
-              "rowSpan": 4
-            },
-            "metadata": {
-              "inputs": [
-                {
-                  "name": "ComponentId",
-                  "value": "Azure Monitor",
-                  "isOptional": true
-                },
-                {
-                  "name": "TimeContext",
-                  "value": null,
-                  "isOptional": true
-                },
-                {
-                  "name": "ResourceIds",
-                  "value": [
-                    "Azure Monitor"
-                  ],
-                  "isOptional": true
-                },
-                {
-                  "name": "ConfigurationId",
-                  "value": "/subscriptions/7cd5188a-c3e2-4043-a190-4609487ad553/resourcegroups/stellrmsp-wvd-rg/providers/microsoft.insights/workbooks/7bc583e6-b7d6-4eeb-9da5-4ce05c5a7834",
-                  "isOptional": true
-                },
-                {
-                  "name": "Type",
-                  "value": "workbook",
-                  "isOptional": true
-                },
-                {
-                  "name": "GalleryResourceType",
-                  "value": "Azure Monitor",
-                  "isOptional": true
-                },
-                {
-                  "name": "PinName",
-                  "value": "WVD",
-                  "isOptional": true
-                },
-                {
-                  "name": "StepSettings",
-                  "value": "{\"version\":\"KqlItem/1.0\",\"query\":\"let WVDHosts = dynamic([{WVDHosts}]);\\r\\nPerf\\r\\n| extend HostPool = '{HostPool}'\\r\\n| extend FullName = strcat(HostPool, \\\"/\\\", Computer)\\r\\n| where FullName in (WVDHosts)\\r\\n| where InstanceName != \\\"_Total\\\"\\r\\n| where ObjectName == \\\"Process\\\" and CounterName == \\\"% Processor Time\\\"\\r\\n| summarize AggregatedValue = avg(CounterValue) by bin(TimeGenerated, 10m), InstanceName, Computer\",\"size\":0,\"showAnalytics\":true,\"title\":\"% Processor Time by Process\",\"timeContext\":{\"durationMs\":2592000000},\"timeContextFromParameter\":\"TimeRange\",\"queryType\":0,\"resourceType\":\"microsoft.operationalinsights/workspaces\",\"crossComponentResources\":[\"{Workspace}\"],\"visualization\":\"linechart\"}",
-                  "isOptional": true
-                },
-                {
-                  "name": "ParameterValues",
-                  "value": {
-                    "Subscription": {
-                      "type": 6,
-                      "value": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b",
-                      "formattedValue": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b",
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "Visual Studio Enterprise Subscription – MPN - Matt",
-                      "displayName": "Subscription"
-                    },
-                    "SubscriptionID": {
-                      "type": 6,
-                      "value": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b",
-                      "formattedValue": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b",
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "Visual Studio Enterprise Subscription – MPN - Matt",
-                      "displayName": "SubscriptionID"
-                    },
-                    "Workspace": {
-                      "type": 5,
-                      "value": [
-                        "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b/resourceGroups/WVD-Test/providers/Microsoft.OperationalInsights/workspaces/desktop-monitoring"
-                      ],
-                      "formattedValue": "'/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b/resourceGroups/WVD-Test/providers/Microsoft.OperationalInsights/workspaces/desktop-monitoring'",
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "desktop-monitoring",
-                      "displayName": "Log Analytics Workspace"
-                    },
-                    "ResourceGroup": {
-                      "type": 5,
-                      "value": null,
-                      "formattedValue": null,
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "<unset>",
-                      "displayName": "ResourceGroup"
-                    },
-                    "HostPool": {
-                      "type": 5,
-                      "value": null,
-                      "formattedValue": null,
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "<unset>",
-                      "displayName": "HostPool"
-                    },
-                    "WVDHosts": {
-                      "type": 5,
-                      "formattedValue": null,
-                      "isPending": false,
-                      "isWaiting": true,
-                      "isFailed": false,
-                      "labelValue": "<query pending>",
-                      "displayName": "WVDHosts"
-                    },
-                    "TimeRange": {
-                      "type": 4,
-                      "value": {
-                        "durationMs": 2592000000,
-                        "createdTime": "2020-11-25T20:36:53.727Z",
-                        "isInitialTime": false,
-                        "grain": 1,
-                        "useDashboardTimeRange": false
-                      },
-                      "formattedValue": "Last 30 days",
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "Last 30 days",
-                      "displayName": "TimeRange"
-                    },
-                    "selectedTab": {
-                      "type": 1,
-                      "value": "SessionPerformance",
-                      "formattedValue": "SessionPerformance"
-                    }
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "Location",
-                  "value": "eastus",
-                  "isOptional": true
-                }
-              ],
-              "type": "Extension/AppInsightsExtension/PartType/PinnedNotebookQueryPart"
-            }
-          },
-          "23": {
-            "position": {
-              "x": 0,
-              "y": 21,
-              "colSpan": 6,
-              "rowSpan": 4
-            },
-            "metadata": {
-              "inputs": [
-                {
-                  "name": "ComponentId",
-                  "value": "Azure Monitor",
-                  "isOptional": true
-                },
-                {
-                  "name": "TimeContext",
-                  "value": null,
-                  "isOptional": true
-                },
-                {
-                  "name": "ResourceIds",
-                  "value": [
-                    "Azure Monitor"
-                  ],
-                  "isOptional": true
-                },
-                {
-                  "name": "ConfigurationId",
-                  "value": "/subscriptions/7cd5188a-c3e2-4043-a190-4609487ad553/resourcegroups/stellrmsp-wvd-rg/providers/microsoft.insights/workbooks/7bc583e6-b7d6-4eeb-9da5-4ce05c5a7834",
-                  "isOptional": true
-                },
-                {
-                  "name": "Type",
-                  "value": "workbook",
-                  "isOptional": true
-                },
-                {
-                  "name": "GalleryResourceType",
-                  "value": "Azure Monitor",
-                  "isOptional": true
-                },
-                {
-                  "name": "PinName",
-                  "value": "WVD",
-                  "isOptional": true
-                },
-                {
-                  "name": "StepSettings",
-                  "value": "{\"version\":\"KqlItem/1.0\",\"query\":\"let WVDHosts = dynamic([{WVDHosts}]);\\r\\nPerf\\r\\n| extend HostPool = '{HostPool}'\\r\\n| extend FullName = strcat(HostPool, \\\"/\\\", Computer)\\r\\n| where FullName in (WVDHosts)\\r\\n| where InstanceName != \\\"_Total\\\"\\r\\n| where ObjectName == \\\"Process\\\" and CounterName == \\\"% User Time\\\"\\r\\n| summarize AggregatedValue = avg(CounterValue) by bin(TimeGenerated, 10m), InstanceName, Computer\\r\\n\",\"size\":0,\"showAnalytics\":true,\"title\":\"% User Time by Process\",\"timeContext\":{\"durationMs\":2592000000},\"timeContextFromParameter\":\"TimeRange\",\"queryType\":0,\"resourceType\":\"microsoft.operationalinsights/workspaces\",\"crossComponentResources\":[\"{Workspace}\"],\"visualization\":\"linechart\"}",
-                  "isOptional": true
-                },
-                {
-                  "name": "ParameterValues",
-                  "value": {
-                    "Subscription": {
-                      "type": 6,
-                      "value": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b",
-                      "formattedValue": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b",
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "Visual Studio Enterprise Subscription – MPN - Matt",
-                      "displayName": "Subscription"
-                    },
-                    "SubscriptionID": {
-                      "type": 6,
-                      "value": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b",
-                      "formattedValue": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b",
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "Visual Studio Enterprise Subscription – MPN - Matt",
-                      "displayName": "SubscriptionID"
-                    },
-                    "Workspace": {
-                      "type": 5,
-                      "value": [
-                        "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b/resourceGroups/WVD-Test/providers/Microsoft.OperationalInsights/workspaces/desktop-monitoring"
-                      ],
-                      "formattedValue": "'/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b/resourceGroups/WVD-Test/providers/Microsoft.OperationalInsights/workspaces/desktop-monitoring'",
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "desktop-monitoring",
-                      "displayName": "Log Analytics Workspace"
-                    },
-                    "ResourceGroup": {
-                      "type": 5,
-                      "value": null,
-                      "formattedValue": null,
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "<unset>",
-                      "displayName": "ResourceGroup"
-                    },
-                    "HostPool": {
-                      "type": 5,
-                      "value": null,
-                      "formattedValue": null,
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "<unset>",
-                      "displayName": "HostPool"
-                    },
-                    "WVDHosts": {
-                      "type": 5,
-                      "formattedValue": null,
-                      "isPending": false,
-                      "isWaiting": true,
-                      "isFailed": false,
-                      "labelValue": "<query pending>",
-                      "displayName": "WVDHosts"
-                    },
-                    "TimeRange": {
-                      "type": 4,
-                      "value": {
-                        "durationMs": 2592000000,
-                        "createdTime": "2020-11-25T20:36:53.727Z",
-                        "isInitialTime": false,
-                        "grain": 1,
-                        "useDashboardTimeRange": false
-                      },
-                      "formattedValue": "Last 30 days",
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "Last 30 days",
-                      "displayName": "TimeRange"
-                    },
-                    "selectedTab": {
-                      "type": 1,
-                      "value": "SessionPerformance",
-                      "formattedValue": "SessionPerformance"
-                    }
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "Location",
-                  "value": "eastus",
-                  "isOptional": true
-                }
-              ],
-              "type": "Extension/AppInsightsExtension/PartType/PinnedNotebookQueryPart"
-            }
-          },
-          "24": {
-            "position": {
-              "x": 0,
-              "y": 25,
-              "colSpan": 6,
-              "rowSpan": 4
-            },
-            "metadata": {
-              "inputs": [
-                {
-                  "name": "ComponentId",
-                  "value": "Azure Monitor",
-                  "isOptional": true
-                },
-                {
-                  "name": "TimeContext",
-                  "value": null,
-                  "isOptional": true
-                },
-                {
-                  "name": "ResourceIds",
-                  "value": [
-                    "Azure Monitor"
-                  ],
-                  "isOptional": true
-                },
-                {
-                  "name": "ConfigurationId",
-                  "value": "/subscriptions/7cd5188a-c3e2-4043-a190-4609487ad553/resourcegroups/stellrmsp-wvd-rg/providers/microsoft.insights/workbooks/7bc583e6-b7d6-4eeb-9da5-4ce05c5a7834",
-                  "isOptional": true
-                },
-                {
-                  "name": "Type",
-                  "value": "workbook",
-                  "isOptional": true
-                },
-                {
-                  "name": "GalleryResourceType",
-                  "value": "Azure Monitor",
-                  "isOptional": true
-                },
-                {
-                  "name": "PinName",
-                  "value": "WVD",
-                  "isOptional": true
-                },
-                {
-                  "name": "StepSettings",
-                  "value": "{\"version\":\"KqlItem/1.0\",\"query\":\"let WVDHosts = dynamic([{WVDHosts}]);\\r\\nPerf\\r\\n| extend HostPool = '{HostPool}'\\r\\n| extend HostPool = strcat(HostPool, \\\"/\\\")\\r\\n| extend Computername = strcat(HostPool, Computer)\\r\\n| where Computername in (WVDHosts)\\r\\n| where ObjectName == \\\"Processor\\\" and CounterName == \\\"% Processor Time\\\"\\r\\n| summarize AggregatedValue = avg(CounterValue) by bin(TimeGenerated, 10m), Computer, InstanceName \",\"size\":1,\"aggregation\":3,\"title\":\"Processor % Processor Time per host\",\"timeContext\":{\"durationMs\":2592000000},\"timeContextFromParameter\":\"TimeRange\",\"queryType\":0,\"resourceType\":\"microsoft.operationalinsights/workspaces\",\"crossComponentResources\":[\"{Workspace}\"],\"visualization\":\"timechart\",\"chartSettings\":{\"ySettings\":{\"numberFormatSettings\":{\"unit\":1,\"options\":{\"style\":\"decimal\",\"useGrouping\":true,\"maximumFractionDigits\":1}},\"max\":100}}}",
-                  "isOptional": true
-                },
-                {
-                  "name": "ParameterValues",
-                  "value": {
-                    "Subscription": {
-                      "type": 6,
-                      "value": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b",
-                      "formattedValue": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b",
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "Visual Studio Enterprise Subscription – MPN - Matt",
-                      "displayName": "Subscription"
-                    },
-                    "SubscriptionID": {
-                      "type": 6,
-                      "value": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b",
-                      "formattedValue": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b",
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "Visual Studio Enterprise Subscription – MPN - Matt",
-                      "displayName": "SubscriptionID"
-                    },
-                    "Workspace": {
-                      "type": 5,
-                      "value": [
-                        "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b/resourceGroups/WVD-Test/providers/Microsoft.OperationalInsights/workspaces/desktop-monitoring"
-                      ],
-                      "formattedValue": "'/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b/resourceGroups/WVD-Test/providers/Microsoft.OperationalInsights/workspaces/desktop-monitoring'",
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "desktop-monitoring",
-                      "displayName": "Log Analytics Workspace"
-                    },
-                    "ResourceGroup": {
-                      "type": 5,
-                      "value": null,
-                      "formattedValue": null,
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "<unset>",
-                      "displayName": "ResourceGroup"
-                    },
-                    "HostPool": {
-                      "type": 5,
-                      "value": null,
-                      "formattedValue": null,
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "<unset>",
-                      "displayName": "HostPool"
-                    },
-                    "WVDHosts": {
-                      "type": 5,
-                      "formattedValue": null,
-                      "isPending": false,
-                      "isWaiting": true,
-                      "isFailed": false,
-                      "labelValue": "<query pending>",
-                      "displayName": "WVDHosts"
-                    },
-                    "TimeRange": {
-                      "type": 4,
-                      "value": {
-                        "durationMs": 2592000000,
-                        "createdTime": "2020-11-25T20:36:53.727Z",
-                        "isInitialTime": false,
-                        "grain": 1,
-                        "useDashboardTimeRange": false
-                      },
-                      "formattedValue": "Last 30 days",
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "Last 30 days",
-                      "displayName": "TimeRange"
-                    },
-                    "selectedTab": {
-                      "type": 1,
-                      "value": "HostPerformance",
-                      "formattedValue": "HostPerformance"
-                    }
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "Location",
-                  "value": "eastus",
-                  "isOptional": true
-                }
-              ],
-              "type": "Extension/AppInsightsExtension/PartType/PinnedNotebookQueryPart"
-            }
-          },
-          "25": {
-            "position": {
-              "x": 0,
-              "y": 29,
-              "colSpan": 6,
-              "rowSpan": 4
-            },
-            "metadata": {
-              "inputs": [
-                {
-                  "name": "ComponentId",
-                  "value": "Azure Monitor",
-                  "isOptional": true
-                },
-                {
-                  "name": "TimeContext",
-                  "value": null,
-                  "isOptional": true
-                },
-                {
-                  "name": "ResourceIds",
-                  "value": [
-                    "Azure Monitor"
-                  ],
-                  "isOptional": true
-                },
-                {
-                  "name": "ConfigurationId",
-                  "value": "/subscriptions/7cd5188a-c3e2-4043-a190-4609487ad553/resourcegroups/stellrmsp-wvd-rg/providers/microsoft.insights/workbooks/7bc583e6-b7d6-4eeb-9da5-4ce05c5a7834",
-                  "isOptional": true
-                },
-                {
-                  "name": "Type",
-                  "value": "workbook",
-                  "isOptional": true
-                },
-                {
-                  "name": "GalleryResourceType",
-                  "value": "Azure Monitor",
-                  "isOptional": true
-                },
-                {
-                  "name": "PinName",
-                  "value": "WVD",
-                  "isOptional": true
-                },
-                {
-                  "name": "StepSettings",
-                  "value": "{\"version\":\"KqlItem/1.0\",\"query\":\"let WVDHosts = dynamic([{WVDHosts}]);\\r\\nPerf\\r\\n| extend HostPool = '{HostPool}'\\r\\n| extend HostPool = strcat(HostPool, \\\"/\\\")\\r\\n| extend Computername = strcat(HostPool, Computer)\\r\\n| where Computername in (WVDHosts)\\r\\n| where ObjectName == \\\"Memory\\\" and CounterName == \\\"% Committed Bytes In Use\\\"\\r\\n| summarize AggregatedValue = avg(CounterValue) by bin(TimeGenerated, 10m), Computer\",\"size\":1,\"aggregation\":3,\"title\":\"Memory % Committed bytes in use per Host\",\"timeContext\":{\"durationMs\":2592000000},\"timeContextFromParameter\":\"TimeRange\",\"queryType\":0,\"resourceType\":\"microsoft.operationalinsights/workspaces\",\"crossComponentResources\":[\"{Workspace}\"],\"visualization\":\"timechart\",\"chartSettings\":{\"ySettings\":{\"numberFormatSettings\":{\"unit\":1,\"options\":{\"style\":\"decimal\",\"useGrouping\":true,\"maximumFractionDigits\":1}},\"max\":100}}}",
-                  "isOptional": true
-                },
-                {
-                  "name": "ParameterValues",
-                  "value": {
-                    "Subscription": {
-                      "type": 6,
-                      "value": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b",
-                      "formattedValue": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b",
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "Visual Studio Enterprise Subscription – MPN - Matt",
-                      "displayName": "Subscription"
-                    },
-                    "SubscriptionID": {
-                      "type": 6,
-                      "value": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b",
-                      "formattedValue": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b",
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "Visual Studio Enterprise Subscription – MPN - Matt",
-                      "displayName": "SubscriptionID"
-                    },
-                    "Workspace": {
-                      "type": 5,
-                      "value": [
-                        "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b/resourceGroups/WVD-Test/providers/Microsoft.OperationalInsights/workspaces/desktop-monitoring"
-                      ],
-                      "formattedValue": "'/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b/resourceGroups/WVD-Test/providers/Microsoft.OperationalInsights/workspaces/desktop-monitoring'",
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "desktop-monitoring",
-                      "displayName": "Log Analytics Workspace"
-                    },
-                    "ResourceGroup": {
-                      "type": 5,
-                      "value": null,
-                      "formattedValue": null,
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "<unset>",
-                      "displayName": "ResourceGroup"
-                    },
-                    "HostPool": {
-                      "type": 5,
-                      "value": null,
-                      "formattedValue": null,
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "<unset>",
-                      "displayName": "HostPool"
-                    },
-                    "WVDHosts": {
-                      "type": 5,
-                      "formattedValue": null,
-                      "isPending": false,
-                      "isWaiting": true,
-                      "isFailed": false,
-                      "labelValue": "<query pending>",
-                      "displayName": "WVDHosts"
-                    },
-                    "TimeRange": {
-                      "type": 4,
-                      "value": {
-                        "durationMs": 2592000000,
-                        "createdTime": "2020-11-25T20:36:53.727Z",
-                        "isInitialTime": false,
-                        "grain": 1,
-                        "useDashboardTimeRange": false
-                      },
-                      "formattedValue": "Last 30 days",
-                      "isPending": false,
-                      "isWaiting": false,
-                      "isFailed": false,
-                      "labelValue": "Last 30 days",
-                      "displayName": "TimeRange"
-                    },
-                    "selectedTab": {
-                      "type": 1,
-                      "value": "HostPerformance",
-                      "formattedValue": "HostPerformance"
-                    }
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "Location",
-                  "value": "eastus",
-                  "isOptional": true
-                }
-              ],
-              "type": "Extension/AppInsightsExtension/PartType/PinnedNotebookQueryPart"
-            }
-          }
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "dashboards_mspControlCenterPreview_name": {
+            "defaultValue": "mspControlCenterPreview",
+            "type": "String"
         }
-      }
     },
-    "metadata": {
-      "model": {
-        "timeRange": {
-          "value": {
-            "relative": {
-              "duration": 24,
-              "timeUnit": 1
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Portal/dashboards",
+            "apiVersion": "2020-09-01-preview",
+            "name": "[parameters('dashboards_mspControlCenterPreview_name')]",
+            "location": "eastus",
+            "tags": {
+                "hidden-title": "MSP Control Center Preview"
+            },
+            "properties": {
+                "lenses": [
+                    {
+                        "order": 0,
+                        "parts": [
+                            {
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "rowSpan": 1,
+                                    "colSpan": 4
+                                },
+                                "metadata": {
+                                    "inputs": [],
+                                    "type": "Extension/HubsExtension/PartType/MarkdownPart",
+                                    "settings": {
+                                        "content": {
+                                            "settings": {
+                                                "content": "# Monitoring & Security"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 4,
+                                    "y": 0,
+                                    "rowSpan": 4,
+                                    "colSpan": 3
+                                },
+                                "metadata": {
+                                    "inputs": [],
+                                    "type": "Extension/HubsExtension/PartType/MarkdownPart",
+                                    "settings": {
+                                        "content": {
+                                            "settings": {
+                                                "content": "# Customers\r\n\r\n### Subscriptions\r\n[ Matt-MPN](https://portal.azure.com/#@iursnxpss.onmicrosoft.com/resource/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b/overview)\r\n\r\n[Mike-WVD](https://portal.azure.com/#@iursnxpss.onmicrosoft.com/resource/subscriptions/5b8010bc-870e-4264-824e-694dafdf89ee/overview)\r\n\r\n[Paul-LIghthouse](https://portal.azure.com/#@iursnxpss.onmicrosoft.com/resource/subscriptions/83dffd89-5cae-4c3b-8bd7-1e7122c504e8/overview)"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 7,
+                                    "y": 0,
+                                    "rowSpan": 1,
+                                    "colSpan": 4
+                                },
+                                "metadata": {
+                                    "inputs": [],
+                                    "type": "Extension/HubsExtension/PartType/MarkdownPart",
+                                    "settings": {
+                                        "content": {
+                                            "settings": {
+                                                "content": "# Management Overview"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 11,
+                                    "y": 0,
+                                    "rowSpan": 1,
+                                    "colSpan": 4
+                                },
+                                "metadata": {
+                                    "inputs": [],
+                                    "type": "Extension/HubsExtension/PartType/MarkdownPart",
+                                    "settings": {
+                                        "content": {
+                                            "settings": {
+                                                "content": "# Automation & Configuration\n"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 15,
+                                    "y": 0,
+                                    "rowSpan": 2,
+                                    "colSpan": 4
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/HubsExtension/PartType/ResourcesWithTagBladePinnedPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 0,
+                                    "y": 1,
+                                    "rowSpan": 2,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {}
+                                    ],
+                                    "type": "Extension/Microsoft_OperationsManagementSuite_Workspace/PartType/WorkspacePart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 2,
+                                    "y": 1,
+                                    "rowSpan": 2,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/Microsoft_OperationsManagementSuite_Workspace/PartType/AnalyticsPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 7,
+                                    "y": 1,
+                                    "rowSpan": 2,
+                                    "colSpan": 4
+                                },
+                                "metadata": {
+                                    "inputs": [],
+                                    "type": "Extension/HubsExtension/PartType/ArmExplorerStartPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 11,
+                                    "y": 1,
+                                    "rowSpan": 1,
+                                    "colSpan": 4
+                                },
+                                "metadata": {
+                                    "inputs": [],
+                                    "type": "Extension/HubsExtension/PartType/MarkdownPart",
+                                    "settings": {
+                                        "content": {
+                                            "settings": {
+                                                "content": "[[[![Launch Cloud Shell](https://shell.azure.com/images/launchcloudshell.png \"Launch Cloud Shell\")](https://shell.azure.com)"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 11,
+                                    "y": 2,
+                                    "rowSpan": 2,
+                                    "colSpan": 4
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/Microsoft_Azure_Automation/PartType/MultiVMUpdateManagementBladePinnedPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 15,
+                                    "y": 2,
+                                    "rowSpan": 2,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {}
+                                    ],
+                                    "type": "Extension/Microsoft_Azure_Automation/PartType/AccountDashboardBladePinnedPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 17,
+                                    "y": 2,
+                                    "rowSpan": 1,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [],
+                                    "type": "Extension/Microsoft_Azure_Expert/PartType/AzureAdvisorPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 0,
+                                    "y": 3,
+                                    "rowSpan": 3,
+                                    "colSpan": 4
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {}
+                                    ],
+                                    "type": "Extension/Microsoft_Azure_Health/PartType/ServiceIssuesTilePart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 7,
+                                    "y": 3,
+                                    "rowSpan": 4,
+                                    "colSpan": 4
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/HubsExtension/PartType/BrowseBaseResourcesPinnedPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 4,
+                                    "y": 4,
+                                    "rowSpan": 1,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [],
+                                    "type": "Extension/Microsoft_Azure_CustomerHub/PartType/MyCustomersPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 11,
+                                    "y": 4,
+                                    "rowSpan": 1,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/Microsoft_Azure_Monitoring/PartType/MetricsBladeV3PinnedPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 4,
+                                    "y": 5,
+                                    "rowSpan": 1,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/AppInsightsExtension/PartType/NotebookPinnedPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 0,
+                                    "y": 6,
+                                    "rowSpan": 4,
+                                    "colSpan": 6
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/AppInsightsExtension/PartType/PinnedNotebookQueryPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 6,
+                                    "y": 7,
+                                    "rowSpan": 1,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/Microsoft_Azure_Monitoring/PartType/AlertsSummaryPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 8,
+                                    "y": 7,
+                                    "rowSpan": 1,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {}
+                                    ],
+                                    "type": "Extension/Microsoft_Azure_Monitoring/PartType/DiagnosticsLogsBladePinnedPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 0,
+                                    "y": 10,
+                                    "rowSpan": 4,
+                                    "colSpan": 6
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/AppInsightsExtension/PartType/PinnedNotebookQueryPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 0,
+                                    "y": 14,
+                                    "rowSpan": 4,
+                                    "colSpan": 6
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/AppInsightsExtension/PartType/PinnedNotebookQueryPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 10,
+                                    "y": 19,
+                                    "rowSpan": 1,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/AppInsightsExtension/PartType/NotebookPinnedPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 6,
+                                    "y": 21,
+                                    "rowSpan": 1,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/Microsoft_Azure_Security/PartType/InferredBladePinPartSecurityMenuBlade"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 0,
+                                    "y": 25,
+                                    "rowSpan": 4,
+                                    "colSpan": 6
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/AppInsightsExtension/PartType/PinnedNotebookQueryPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 0,
+                                    "y": 29,
+                                    "rowSpan": 4,
+                                    "colSpan": 6
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/AppInsightsExtension/PartType/PinnedNotebookQueryPart"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "metadata": {
+                    "model": {}
+                }
             }
-          },
-          "type": "MsPortalFx.Composition.Configuration.ValueTypes.TimeRange"
-        },
-        "filterLocale": {
-          "value": "en-us"
-        },
-        "filters": {
-          "value": {
-            "MsPortalFx_TimeRange": {
-              "model": {
-                "format": "utc",
-                "granularity": "auto",
-                "relative": "24h"
-              },
-              "displayCache": {
-                "name": "UTC Time",
-                "value": "Past 24 hours"
-              },
-              "filteredPartIds": [
-                "StartboardPart-PinnedNotebookQueryPart-ad3d9a87-3b77-4b77-b5ec-320528afd7e3",
-                "StartboardPart-PinnedNotebookQueryPart-ad3d9a87-3b77-4b77-b5ec-320528afd7e5",
-                "StartboardPart-PinnedNotebookQueryPart-ad3d9a87-3b77-4b77-b5ec-320528afd7e7",
-                "StartboardPart-PinnedNotebookQueryPart-ad3d9a87-3b77-4b77-b5ec-320528afd7e9",
-                "StartboardPart-PinnedNotebookQueryPart-ad3d9a87-3b77-4b77-b5ec-320528afd7eb"
-              ]
-            }
-          }
         }
-      }
-    }
-  },
-  "name": "MSP Control Center Preview",
-  "type": "Microsoft.Portal/dashboards",
-  "location": "INSERT LOCATION",
-  "tags": {
-    "hidden-title": "MSP Control Center Preview"
-  },
-  "apiVersion": "2015-08-01-preview"
+    ]
 }
