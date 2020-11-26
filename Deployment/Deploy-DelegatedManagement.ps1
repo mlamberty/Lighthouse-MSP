@@ -3,7 +3,7 @@ Connect-AzAccount
 # Deploy Azure Resource Manager template using template and parameter file locally
 New-AzSubscriptionDeployment -Name Synnex-Lighthouse `
                  -Location eastus `
-                 -TemplateFile C:\Users\matthewl\Downloads\Azure\WVD\rgdelegatedResourceManagement.json `
-                 -TemplateParameterFile C:\Users\matthewl\Downloads\Azure\WVD\rgdelegatedResourceManagement.parameters.json `
+                 -TemplateUri https://raw.githubusercontent.com/mlamberty/Lighthouse-MSP/main/Deployment/azuredeploy.json `
+                 -TemplateParameterUri https://raw.githubusercontent.com/mlamberty/Lighthouse-MSP/main/Deployment/azuredeploy.parameters.json `
                  -Verbose
 
