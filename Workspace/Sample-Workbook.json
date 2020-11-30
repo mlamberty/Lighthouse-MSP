@@ -1,4 +1,5 @@
 {
+    "$schema": "https://schema.management.azure.com/schemas/2018-06-17-preview/microsoft.insights.json#/resourceDefinitions/workbooks",
   "version": "Notebook/1.0",
   "items": [
     {
@@ -2653,6 +2654,6 @@
   ],
   "fallbackResourceIds": [
     "Azure Monitor"
-  ],
-  "$schema": "https://github.com/Microsoft/Application-Insights-Workbooks/blob/master/schema/workbook.json"
+  ]
+  
 }
