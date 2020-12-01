@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "workSpaceName": {
-            "value": null
+            "value": wvd-monitor-paul
         }
     }
 }
