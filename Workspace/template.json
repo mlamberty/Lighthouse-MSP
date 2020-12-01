@@ -1,5 +1,5 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
         "workSpaceName": {
@@ -21,8 +21,527 @@
     "variables": {},
     "resources": [
         {
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2020-06-01",
+            "name": "workbook-Link",
+            "properties": {
+                "mode": "Incremental",
+                "expressionEvaluationOptions": {
+                    "scope": "inner"
+                },
+                "template": {
+                "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "dashboards_mspControlCenterPreview_name": {
+            "defaultValue": "mspControlCenterPreview",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Portal/dashboards",
+            "apiVersion": "2020-09-01-preview",
+            "name": "[parameters('dashboards_mspControlCenterPreview_name')]",
+            "location": "eastus",
+            "tags": {
+                "hidden-title": "MSP Control Center Preview"
+            },
+            "properties": {
+                "lenses": [
+                    {
+                        "order": 0,
+                        "parts": [
+                            {
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "rowSpan": 1,
+                                    "colSpan": 4
+                                },
+                                "metadata": {
+                                    "inputs": [],
+                                    "type": "Extension/HubsExtension/PartType/MarkdownPart",
+                                    "settings": {
+                                        "content": {
+                                            "settings": {
+                                                "content": "# Monitoring & Security"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 4,
+                                    "y": 0,
+                                    "rowSpan": 4,
+                                    "colSpan": 3
+                                },
+                                "metadata": {
+                                    "inputs": [],
+                                    "type": "Extension/HubsExtension/PartType/MarkdownPart",
+                                    "settings": {
+                                        "content": {
+                                            "settings": {
+                                                "content": "# Customers\r\n\r\n### Subscriptions\r\n[ Matt-MPN](https://portal.azure.com/#@iursnxpss.onmicrosoft.com/resource/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b/overview)\r\n\r\n[Mike-WVD](https://portal.azure.com/#@iursnxpss.onmicrosoft.com/resource/subscriptions/5b8010bc-870e-4264-824e-694dafdf89ee/overview)\r\n\r\n[Paul-LIghthouse](https://portal.azure.com/#@iursnxpss.onmicrosoft.com/resource/subscriptions/83dffd89-5cae-4c3b-8bd7-1e7122c504e8/overview)"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 7,
+                                    "y": 0,
+                                    "rowSpan": 1,
+                                    "colSpan": 4
+                                },
+                                "metadata": {
+                                    "inputs": [],
+                                    "type": "Extension/HubsExtension/PartType/MarkdownPart",
+                                    "settings": {
+                                        "content": {
+                                            "settings": {
+                                                "content": "# Management Overview"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 11,
+                                    "y": 0,
+                                    "rowSpan": 1,
+                                    "colSpan": 4
+                                },
+                                "metadata": {
+                                    "inputs": [],
+                                    "type": "Extension/HubsExtension/PartType/MarkdownPart",
+                                    "settings": {
+                                        "content": {
+                                            "settings": {
+                                                "content": "# Automation & Configuration\n"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 15,
+                                    "y": 0,
+                                    "rowSpan": 2,
+                                    "colSpan": 4
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/HubsExtension/PartType/ResourcesWithTagBladePinnedPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 0,
+                                    "y": 1,
+                                    "rowSpan": 2,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {}
+                                    ],
+                                    "type": "Extension/Microsoft_OperationsManagementSuite_Workspace/PartType/WorkspacePart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 2,
+                                    "y": 1,
+                                    "rowSpan": 2,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/Microsoft_OperationsManagementSuite_Workspace/PartType/AnalyticsPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 7,
+                                    "y": 1,
+                                    "rowSpan": 2,
+                                    "colSpan": 4
+                                },
+                                "metadata": {
+                                    "inputs": [],
+                                    "type": "Extension/HubsExtension/PartType/ArmExplorerStartPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 11,
+                                    "y": 1,
+                                    "rowSpan": 1,
+                                    "colSpan": 4
+                                },
+                                "metadata": {
+                                    "inputs": [],
+                                    "type": "Extension/HubsExtension/PartType/MarkdownPart",
+                                    "settings": {
+                                        "content": {
+                                            "settings": {
+                                                "content": "[[[![Launch Cloud Shell](https://shell.azure.com/images/launchcloudshell.png \"Launch Cloud Shell\")](https://shell.azure.com)"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 11,
+                                    "y": 2,
+                                    "rowSpan": 2,
+                                    "colSpan": 4
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/Microsoft_Azure_Automation/PartType/MultiVMUpdateManagementBladePinnedPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 15,
+                                    "y": 2,
+                                    "rowSpan": 2,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {}
+                                    ],
+                                    "type": "Extension/Microsoft_Azure_Automation/PartType/AccountDashboardBladePinnedPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 17,
+                                    "y": 2,
+                                    "rowSpan": 1,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [],
+                                    "type": "Extension/Microsoft_Azure_Expert/PartType/AzureAdvisorPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 0,
+                                    "y": 3,
+                                    "rowSpan": 3,
+                                    "colSpan": 4
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {}
+                                    ],
+                                    "type": "Extension/Microsoft_Azure_Health/PartType/ServiceIssuesTilePart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 7,
+                                    "y": 3,
+                                    "rowSpan": 4,
+                                    "colSpan": 4
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/HubsExtension/PartType/BrowseBaseResourcesPinnedPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 4,
+                                    "y": 4,
+                                    "rowSpan": 1,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [],
+                                    "type": "Extension/Microsoft_Azure_CustomerHub/PartType/MyCustomersPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 11,
+                                    "y": 4,
+                                    "rowSpan": 1,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/Microsoft_Azure_Monitoring/PartType/MetricsBladeV3PinnedPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 4,
+                                    "y": 5,
+                                    "rowSpan": 1,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/AppInsightsExtension/PartType/NotebookPinnedPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 0,
+                                    "y": 6,
+                                    "rowSpan": 4,
+                                    "colSpan": 6
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/AppInsightsExtension/PartType/PinnedNotebookQueryPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 6,
+                                    "y": 7,
+                                    "rowSpan": 1,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/Microsoft_Azure_Monitoring/PartType/AlertsSummaryPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 8,
+                                    "y": 7,
+                                    "rowSpan": 1,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {}
+                                    ],
+                                    "type": "Extension/Microsoft_Azure_Monitoring/PartType/DiagnosticsLogsBladePinnedPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 0,
+                                    "y": 10,
+                                    "rowSpan": 4,
+                                    "colSpan": 6
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/AppInsightsExtension/PartType/PinnedNotebookQueryPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 0,
+                                    "y": 14,
+                                    "rowSpan": 4,
+                                    "colSpan": 6
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/AppInsightsExtension/PartType/PinnedNotebookQueryPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 10,
+                                    "y": 19,
+                                    "rowSpan": 1,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/AppInsightsExtension/PartType/NotebookPinnedPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 6,
+                                    "y": 21,
+                                    "rowSpan": 1,
+                                    "colSpan": 2
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/Microsoft_Azure_Security/PartType/InferredBladePinPartSecurityMenuBlade"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 0,
+                                    "y": 25,
+                                    "rowSpan": 4,
+                                    "colSpan": 6
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/AppInsightsExtension/PartType/PinnedNotebookQueryPart"
+                                }
+                            },
+                            {
+                                "position": {
+                                    "x": 0,
+                                    "y": 29,
+                                    "rowSpan": 4,
+                                    "colSpan": 6
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {},
+                                        {}
+                                    ],
+                                    "type": "Extension/AppInsightsExtension/PartType/PinnedNotebookQueryPart"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "metadata": {
+                    "model": {}
+                }
+            }
+        }
+    ]
+}
 
-        },
+                }
+                    
+    
+                    },
         {
             "type": "microsoft.operationalinsights/workspaces",
             "apiVersion": "2020-08-01",
