@@ -1,0 +1,15 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "workSpaceName": {
+            "value": "Monitor_WVD"
+        },
+        "location": {
+            "value": "eastus"
+        },
+        "workbookLink": {
+            "value": "https://raw.githubusercontent.com/mlamberty/Lighthouse-MSP/main/Workspace/Sample-Workbook.json"
+        }
+    }
+}
