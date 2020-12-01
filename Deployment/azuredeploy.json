@@ -87,15 +87,11 @@
             "metadata": {
         "description": "The Uri of the linked template."
       }
-    },
-    "location": {
-        "type": "string",
-        "defaultValue": "eastus"
-    }          
+    } 
     },
     "variables": {
         "mspRegistrationName": "[guid(parameters('mspOfferName'))]",
-        "workSpaceName": "WVD-MOnitor"
+        "workSpaceName": "[parameters('mspOfferName')]"
     },
     "resources": [
         {
@@ -153,10 +149,7 @@
         "parameters": {
           "workSpaceName": {
             "value": "[variables('workSpaceName')]"
-          },
-          "location": {
-            "value": "[parameters('location')]"
-          }
+          }         
         }
       }
     }
