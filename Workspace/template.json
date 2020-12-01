@@ -601,7 +601,7 @@
                         "resourceType": "Azure Monitor"
                     }
                 ],
-                "templateData":{
+                "templateData": {
     "$schema": "https://schema.management.azure.com/schemas/2018-06-17-preview/microsoft.insights.json#/resourceDefinitions/workbooks",
   "version": "Notebook/1.0",
   "items": [
@@ -1935,7 +1935,7 @@
                   "typeSettings": {
                     "additionalResourceOptions": []
                   },
-                  "jsonData": "[\r\n    {\"label\":\"False\", \"value\":\"| where ServiceError == 'False'\", \"selected\":\"True\"},\r\n    {\"label\":\"True\", \"value\":\"| where ServiceError == 'True'\", \"selected\":\"False\"}\r\n]",
+                  "jsonData": "[\r\n{\"label\":\"False\", \"value\":\"| where ServiceError == 'False'\", \"selected\":\"True\"},\r\n    {\"label\":\"True\", \"value\":\"| where ServiceError == 'True'\", \"selected\":\"False\"}\r\n]",
                   "timeContext": {
                     "durationMs": 86400000
                   }
