@@ -141,8 +141,7 @@
       "name": "linkedTemplate",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2018-05-01",
-      "location": "eastus",
-      "resourceGroup": "StellrMSP-WVD-RG",
+      "location": "eastus",      
       "properties": {
         "mode": "Incremental",        
         "templateLink": {
