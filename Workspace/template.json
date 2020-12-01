@@ -3,9 +3,12 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "workSpaceName": {
-            "defaultValue": "<Enter Your Desired WOrkspace Name>",
+            "defaultValue": "<Enter Your Desired Workspace Name>",
             "type": "String"
-        },      
+        }, 
+        "location": {
+          "defaultValue": "eastus"
+        },    
          "workbookLink":{
         "type": "string",
         "defaultValue": "https://raw.githubusercontent.com/mlamberty/Lighthouse-MSP/main/Workspace/Sample-Workbook.json"
@@ -16,6 +19,9 @@
     
     "variables": {},
     "resources": [
+        {
+
+        },
         {
             "type": "microsoft.operationalinsights/workspaces",
             "apiVersion": "2020-08-01",
