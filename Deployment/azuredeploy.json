@@ -67,7 +67,7 @@
         "resourceGroups": {
             "type": "array",
             "metadata": { 
-                "description": "Note: resource groups must already exist in tenant" 
+                "description": "Note: resource groups must already exist in tenant, list in fomat "[{"rgName":"test1"},{"rgName":"test2"}]" " 
             },
             "defaultValue": [
                 {
@@ -96,7 +96,7 @@
     "resources": [
         {
             "type": "Microsoft.ManagedServices/registrationDefinitions",
-            "apiVersion": "2020-02-01-preview",
+            "apiVersion": "2020-06-01",
             "name": "[variables('mspRegistrationName')]",
             "properties": {
                 "registrationDefinitionName": "[parameters('mspOfferName')]",
@@ -108,7 +108,7 @@
         },
         {
             "type": "Microsoft.Resources/deployments",
-            "apiVersion": "2018-05-01",
+            "apiVersion": "2020-06-01",
             "name": "[concat('rgAssignment', copyIndex())]",
             "resourceGroup": "[parameters('resourceGroups')[copyIndex()].rgName]",
             "copy": {
@@ -138,10 +138,10 @@
             }
         },
      {
-      "name": "linkedTemplate",
       "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2018-05-01",
-      "location": "eastus",      
+      "apiVersion": "2020-06-01",
+      "name": "linkedTemplate",
+      "location": "East US",      
       "properties": {
         "mode": "Incremental",        
         "templateLink": {
