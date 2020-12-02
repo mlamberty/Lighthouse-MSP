@@ -61,100 +61,35 @@
           ]
         }
       ]
-	},
-        
-           
-        "resourceGroups": {
-            "type": "array",
-            "metadata": { 
-                "description": "Note: resource groups must already exist in tenant" 
-            },
-            "defaultValue": [
-                {
-                    "rgName": "test1"
-                },
-                {
-                    "rgName": "test2"
-                },
-                {
-                    "rgName": "test3"
-                }
-            ] 
-        },
-        "linkedTemplateUri" : {
-            "type": "string",
-            "defaultValue": "https://raw.githubusercontent.com/mlamberty/Lighthouse-MSP/main/Workspace/template.json",            
-            "metadata": {
-        "description": "The Uri of the linked template."
-      }
-    } 
-    },
-    "variables": {
+	}
+},
+"variables": {
         "mspRegistrationName": "[guid(parameters('mspOfferName'))]",
-        "workSpaceName": "[parameters('mspOfferName')]"
+        "mspAssignmentName": "[guid(parameters('mspOfferName'))]"
     },
     "resources": [
         {
             "type": "Microsoft.ManagedServices/registrationDefinitions",
-            "apiVersion": "2020-06-01",
+            "apiVersion": "2019-09-01",
             "name": "[variables('mspRegistrationName')]",
             "properties": {
                 "registrationDefinitionName": "[parameters('mspOfferName')]",
                 "description": "[parameters('mspOfferDescription')]",
                 "managedByTenantId": "[parameters('managedByTenantId')]",
                 "authorizations": "[parameters('authorizations')]"
-            
             }
         },
         {
-            "type": "Microsoft.Resources/deployments",
-            "apiVersion": "2020-06-01",
-            "location": "East US",
-            "name": "[concat('rgAssignment', copyIndex())]",
-            "resourceGroup": "[parameters('resourceGroups')[copyIndex()].rgName]",
-            "copy": {
-                "name": "deploymentCopy",
-                "count": "[length(parameters('resourceGroups'))]"
-            },
+            "type": "Microsoft.ManagedServices/registrationAssignments",
+            "apiVersion": "2019-09-01",
+            "name": "[variables('mspAssignmentName')]",
             "dependsOn": [
                 "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', variables('mspRegistrationName'))]"
             ],
-            "properties":{
-                "mode":"Incremental",
-                "template":{
-                    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-                    "contentVersion": "1.0.0.0",
-                    "parameters": {},
-                    "resources": [
-                        {
-                            "type": "Microsoft.ManagedServices/registrationAssignments",
-                            "apiVersion": "2018-06-01-preview",
-                            "name": "[guid(parameters('resourceGroups')[copyIndex()].rgName)]",
-                            "properties": {
-                                "registrationDefinitionId": "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', variables('mspRegistrationName'))]"
-                            }
-                        }
-                    ]
-                }
+            "properties": {
+                "registrationDefinitionId": "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', variables('mspRegistrationName'))]"
             }
-        },
-     {
-      "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2020-06-01",
-      "name": "linkedTemplate",
-      "location": "East US",   
-      "properties": {
-        "mode": "Incremental",               
-        "templateLink": {
-          "uri": "[parameters('linkedTemplateUri')]"
-        },
-        "parameters": {
-          "workSpaceName": {
-            "value": "[variables('workSpaceName')]"
-          }         
         }
-      }
-    }
     ],
     "outputs": {
         "mspOfferName": {
@@ -165,6 +100,5 @@
             "type": "array",
             "value": "[parameters('authorizations')]"
         }
-        
     }
 }
