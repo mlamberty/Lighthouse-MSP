@@ -80,18 +80,11 @@
                     "rgName": "test3"
                 }
             ] 
-        },
-        "linkedTemplateUri" : {
-            "type": "string",
-            "defaultValue": "https://raw.githubusercontent.com/mlamberty/Lighthouse-MSP/main/Workspace/template.json",            
-            "metadata": {
-        "description": "The Uri of the linked template."
-      }
-    } 
+        }
+        
     },
     "variables": {
-        "mspRegistrationName": "[guid(parameters('mspOfferName'))]",
-        "workSpaceName": "[parameters('mspOfferName')]"
+        "mspRegistrationName": "[guid(parameters('mspOfferName'))]"
     },
     "resources": [
         {
@@ -137,24 +130,8 @@
                     ]
                 }
             }
-        },
-     {
-      "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2020-06-01",
-      "name": "linkedTemplate",
-      "location": "East US",   
-      "properties": {
-        "mode": "Incremental",               
-        "templateLink": {
-          "uri": "[parameters('linkedTemplateUri')]"
-        },
-        "parameters": {
-          "workSpaceName": {
-            "value": "[variables('workSpaceName')]"
-          }         
         }
-      }
-    }
+     
     ],
     "outputs": {
         "mspOfferName": {
