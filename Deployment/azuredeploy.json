@@ -109,6 +109,7 @@
         {
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2020-06-01",
+            "location": "East US",
             "name": "[concat('rgAssignment', copyIndex())]",
             "resourceGroup": "[parameters('resourceGroups')[copyIndex()].rgName]",
             "copy": {
@@ -141,9 +142,10 @@
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2020-06-01",
       "name": "linkedTemplate",
-      "location": "East US",      
+      "location": "East US",   
       "properties": {
-        "mode": "Incremental",        
+        "mode": "Incremental",
+               
         "templateLink": {
           "uri": "[parameters('linkedTemplateUri')]"
         },
