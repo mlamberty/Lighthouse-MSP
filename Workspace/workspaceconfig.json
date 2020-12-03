@@ -1,5 +1,5 @@
 {
- "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
           "workspaceName": {
@@ -18,7 +18,7 @@
   },
   "resources": [
     {
-      "apiVersion": "2020-08-01",
+      "apiVersion": "2017-03-15-preview",
       "type": "Microsoft.OperationalInsights/workspaces",
       "name": "[parameters('workspaceName')]",
       "location": "[parameters('location')]",
@@ -441,11 +441,6 @@
     "sku": {
       "type": "string",
       "value": "[reference(resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceName')), '2015-11-01-preview').sku.name]"
-    },
-    "workspaceKey": {
-            "type": "string",
-            "value": "[reference(resourceId('Microsoft.OperationalInsights/workspaces' , parameters('workspaceName')), '2015-11-01-preview').key]"
-
     }
   }
 }
