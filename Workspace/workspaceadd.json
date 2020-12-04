@@ -4,18 +4,23 @@
                 "parameters": {
                         "workspaceId": {
                                 "type": "string",
+                                "defaultValue": "[reference('workspace').outputs.workspaceName.value]",
                                 "metadata": {
                                         "description": "Workspace name"
                                 }
                         },
                         "workspaceKey": {
                                 "type": "string",
+                                "defaultValue": "[ listKeys(parameters('workspaceId'), '2017-03-15-preview').primarySharedKey]",
                                 "metadata": {
                                         "description": "Workspace Key"
                                 }
                         },
                         "virtualMachines": {
-                                "type": "array"
+                                "type": "array",
+                                "defaultValue":[
+
+                                ] 
                         },
                         "extensionNames": {
                                 "type": "array"
@@ -29,6 +34,18 @@
                         }
                 },
                 "resources": [
+                {
+                        "name": "workspace",
+                        "type": "Microsoft.Resources/deployments",
+                        "apiVersion": "2016-09-01",
+                        "properties": {
+                                "mode": "Incremental",
+                                "templateLink": {
+                                    "uri": "https://raw.githubusercontent.com/mlamberty/Lighthouse-MSP/main/Workspace/workspaceconfig.json",
+                                    "contentVersion": "1.0.0.0"
+                                }                                
+                            }
+                },
                 {
                         "apiVersion": "2018-10-01",
                         "type": "Microsoft.Compute/virtualMachines/extensions",

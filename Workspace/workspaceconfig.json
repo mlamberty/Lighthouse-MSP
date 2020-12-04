@@ -424,7 +424,7 @@
   "outputs": {
     "workspaceName": {
       "type": "string",
-      "value": "[parameters('workspaceName')]"
+      "value": "[resourceId('Microsoft.OperationalInsights/workspaces' , parameters('workspaceName'))]"
     },
     "provisioningState": {
       "type": "string",
