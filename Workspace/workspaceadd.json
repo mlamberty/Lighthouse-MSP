@@ -4,14 +4,13 @@
                 "parameters": {
                         "workspaceId": {
                                 "type": "string",
-                                "defaultValue": "[reference('workspace').outputs.workspaceName.value]",
                                 "metadata": {
-                                        "description": "Workspace name"
+                                    "description": "Workspace name"
                                 }
                         },
                         "workspaceKey": {
                                 "type": "string",
-                                "defaultValue": "[ listKeys(parameters('workspaceId'), '2017-03-15-preview').primarySharedKey]",
+                                "defaultValue":"[variables('workspaceKey')]" ,
                                 "metadata": {
                                         "description": "Workspace Key"
                                 }
@@ -32,6 +31,9 @@
                                         "description": "Location for all resources."
                                 }
                         }
+                },
+                "variables": {
+                        "workspaceKey": "[ listKeys(parameters('workspaceId'), '2017-03-15-preview').primarySharedKey]"
                 },
                 "resources": [
                 {
@@ -61,7 +63,7 @@
                                 "typeHandlerVersion": "1.0",
                                 "autoUpgradeMinorVersion": true,
                                 "settings": {
-                                        "workspaceId": "[parameters('workspaceId')]"
+                                        "workspaceId": "[reference('workspace').outputs.workspaceName.value]"                                        
                                 },
                                 "protectedSettings": {
                                         "workspaceKey": "[parameters('workspaceKey')]"
