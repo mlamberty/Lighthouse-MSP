@@ -16,13 +16,16 @@
                                 }
                         },
                         "virtualMachines": {
-                                "type": "array",
-                                "defaultValue":[
-
-                                ] 
+                                "type": "array"
+                                
                         },
                         "extensionNames": {
-                                "type": "array"
+                                "type": "array",
+                                "defaultValue": [
+                                        "MicrosoftMonitoringAgent",
+                                        "DependencyAgentWindows",
+                                        "Microsoft.Insights.VMDiagnosticsSettings"
+                                ]
                         },
                         "location": {
                                 "type": "string",
