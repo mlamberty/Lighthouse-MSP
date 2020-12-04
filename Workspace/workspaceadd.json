@@ -22,9 +22,16 @@
                         "extensionNames": {
                                 "type": "array",
                                 "defaultValue": [
-                                        "MicrosoftMonitoringAgent",
-                                        "DependencyAgentWindows",
-                                        "Microsoft.Insights.VMDiagnosticsSettings"
+                                        {
+                                                "Extension":"MicrosoftMonitoringAgent"
+                                        },
+                                        {
+                                                "Extension":"DependencyAgentWindows"
+                                        },
+                                        {
+                                                "Extension":"Microsoft.Insights.VMDiagnosticsSettings"
+                                        }
+                                        
                                 ]
                         },
                         "location": {
