@@ -6,7 +6,8 @@
                                 "type": "string",
                                 "metadata": {
                                     "description": "Workspace name"
-                                }
+                                },
+                                "defaultValue": "[variables('workspaceId')]"
                         },
                         "workspaceKey": {
                                 "type": "string",
@@ -43,7 +44,8 @@
                         }
                 },
                 "variables": {
-                        "workspaceKey": "[ listKeys(parameters('workspaceId'), '2017-03-15-preview').primarySharedKey]"
+                        "workspaceKey": "[ listKeys(parameters('workspaceId'), '2017-03-15-preview').primarySharedKey]",
+                        "workspaceId":"(uri(deployment().properties.templatelink.uri).outputs.workspaceId.value)"
                 },
                 "resources": [
                 {
