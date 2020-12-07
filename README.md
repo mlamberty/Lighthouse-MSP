@@ -15,7 +15,7 @@ Enter any resource groups related to your Virtual Desktop environment in format:
 
 Log Analytics Workspace
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmlamberty%2FLighthouse-MSP%2Fmain%2FWorkspace%2Ftemplate.json" target= "_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmlamberty%2FLighthouse-MSP%2Fmain%2FWorkspace%2Fworkspaceadd.json" target= "_blank">
 <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.png"/>
 </a>
 
