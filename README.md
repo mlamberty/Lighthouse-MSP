@@ -19,3 +19,4 @@ Log Analytics Workspace
 <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.png"/>
 </a>
 
+Deploy Log Analytics Workspace with all Events and Metrics
