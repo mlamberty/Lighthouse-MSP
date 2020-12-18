@@ -1,5 +1,5 @@
 {
-  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
           "workspaceName": {
@@ -73,6 +73,52 @@
               "kind": "WindowsEvent",
               "properties": {
                       "eventLogName": "Microsoft-Windows-TerminalServices-RemoteConnectionManagement",
+                      "eventTypes": [
+                      {
+                              "eventType": "Error"
+                      },
+                      {
+                              "eventType": "Warning"
+                      },
+                      {
+                              "eventType": "Information"
+                      }
+                      ]
+              }
+      },
+      {
+              "apiVersion": "2015-11-01-preview",
+              "type": "datasources",
+              "name": "sampleWindowsEvent7",
+              "dependsOn": [
+                      "[concat('Microsoft.OperationalInsights/workspaces/', parameters('workspaceName'))]"
+              ],
+              "kind": "WindowsEvent",
+              "properties": {
+                      "eventLogName": "Microsoft-Windows-TerminalServices-RemoteConnectionManager/Admin",
+                      "eventTypes": [
+                      {
+                              "eventType": "Error"
+                      },
+                      {
+                              "eventType": "Warning"
+                      },
+                      {
+                              "eventType": "Information"
+                      }
+                      ]
+              }
+      },
+      {
+              "apiVersion": "2015-11-01-preview",
+              "type": "datasources",
+              "name": "sampleWindowsEvent8",
+              "dependsOn": [
+                      "[concat('Microsoft.OperationalInsights/workspaces/', parameters('workspaceName'))]"
+              ],
+              "kind": "WindowsEvent",
+              "properties": {
+                      "eventLogName": "Microsoft-Windows-TerminalServices-LOcalSessionManager/Operational",
                       "eventTypes": [
                       {
                               "eventType": "Error"
