@@ -1,0 +1,77 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus"
+        },
+        "networkInterfaceName": {
+            "value": "goldenimage686"
+        },
+        "networkSecurityGroupName": {
+            "value": "GoldenImage-nsg"
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "RDP",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "3389"
+                    }
+                }
+            ]
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b/resourceGroups/WVD-AD/providers/Microsoft.Network/virtualNetworks/WVD-Test-vnet"
+        },
+        "publicIpAddressName": {
+            "value": "GoldenImage-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        },
+        "virtualMachineName": {
+            "value": "GoldenImage"
+        },
+        "virtualMachineComputerName": {
+            "value": "GoldenImage"
+        },
+        "virtualMachineRG": {
+            "value": "WVD-Test"
+        },
+        "osDiskType": {
+            "value": "Premium_LRS"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B4ms"
+        },
+        "adminUsername": {
+            "value": "WVDadmin"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "patchMode": {
+            "value": "AutomaticByOS"
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "wvdinstalls"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "/subscriptions/77ee48bd-9a7d-460d-93e2-30a0d8930f5b/resourceGroups/WVD-Custom_group/providers/Microsoft.Storage/storageAccounts/wvdinstalls"
+        }
+    }
+}
