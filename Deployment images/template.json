@@ -178,9 +178,36 @@
                     }
                 }
             },
+         
             "tags": {
                 "wvd": "Golden"
             }
+        },
+        {
+            "name": "parameters('virtualMachineName/customScript1",
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "apiVersion": "2019-07-01",
+            "location": "[resourceGroup().location]",
+            "tags": {
+                "displayName": "customScript1 for Windows VM"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachineName'))]"
+            ],
+            "properties": {
+                "publisher": "Microsoft.Compute",
+                "type": "CustomScriptExtension",
+                "typeHandlerVersion": "1.10",
+                "autoUpgradeMinorVersion": true,
+                "settings": {
+                    "fileUris": [
+                        "https://github.com/mlamberty/Lighthouse-MSP/tree/main/Deployment%20images/install_apps.ps1"
+                    ],
+                    "commandToExecute":"powershell.exe -Verb RunAs -ExecutionPolicy Unrestricted -File install_apps.ps1"
+                }              
+                    
+                }
+            
         }
     ],
     "outputs": {
