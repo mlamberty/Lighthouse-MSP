@@ -20,7 +20,12 @@
         "actionGroups_name": {
             "defaultValue": "",
             "type": "String"
+        },
+        "workspaceName": {
+            "defaultValue": "",
+            "type": "string"
         }
+
     },
     "variables": {},
     "resources": [
@@ -119,8 +124,10 @@
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
+                    "workspaceName":{
+                        "value": "[parameters('workspaceName')]"
+                    }
                 }
             }
         }
     ]
-}
