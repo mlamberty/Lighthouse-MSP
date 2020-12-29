@@ -1,0 +1,55 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "scheduledqueryrules_Evnet_log_warning_name": {
+            "defaultValue": "Evnet log warning",
+            "type": "String"
+        },
+        "workspaces_mlwvdmsp_externalid": {
+            "defaultValue": "/subscriptions/b309b674-c066-471b-9667-8d06770bf623/resourceGroups/Stellr_WVD_Infrastructure/providers/Microsoft.OperationalInsights/workspaces/mlwvdmsp",
+            "type": "String"
+        },
+        "actiongroups_wvd_alerts_externalid": {
+            "defaultValue": "/subscriptions/b309b674-c066-471b-9667-8d06770bf623/resourceGroups/stellr_wvd_infrastructure/providers/microsoft.insights/actiongroups/wvd-alerts",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "microsoft.insights/scheduledqueryrules",
+            "apiVersion": "2018-04-16",
+            "name": "[parameters('scheduledqueryrules_Evnet_log_warning_name')]",
+            "location": "eastus",
+            "properties": {
+                "enabled": "true",
+                "source": {
+                    "query": "Event | where EventLevelName == \"warning\" | sort by TimeGenerated desc\r\n// Oql: Type=Event EventLevelName=warning // Args: {OQ: True; WorkspaceId: 00000000-0000-0000-0000-000000000000} // Settings: {PTT: True; SortI: True; SortF: True} // Version: 0.1.122",
+                    "authorizedResources": [],
+                    "dataSourceId": "[parameters('workspaces_mlwvdmsp_externalid')]",
+                    "queryType": "ResultCount"
+                },
+                "schedule": {
+                    "frequencyInMinutes": 5,
+                    "timeWindowInMinutes": 5
+                },
+                "action": {
+                    "severity": "3",
+                    "aznsAction": {
+                        "actionGroup": [
+                            "[parameters('actiongroups_wvd_alerts_externalid')]"
+                        ],
+                        "emailSubject": "VIrtual desktop warning event"
+                    },
+                    "throttlingInMin": 30,
+                    "trigger": {
+                        "thresholdOperator": "GreaterThanOrEqual",
+                        "threshold": 1
+                    },
+                    "odata.type": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction"
+                }
+            }
+        }
+    ]
+}

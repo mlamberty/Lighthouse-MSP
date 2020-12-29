@@ -1,0 +1,55 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "scheduledqueryrules_Error_Events_name": {
+            "defaultValue": "",
+            "type": "String"
+        },
+        "workspaces_mlwvdmsp_externalid": {
+            "defaultValue": "/subscriptions/Subscription()/resourceGroups/resourceGroup().name/providers/Microsoft.OperationalInsights/workspaces/mlwvdmsp",
+            "type": "String"
+        },
+        "actiongroups_externalid": {
+            "defaultValue": "/subscriptions/Subscription()/resourceGroups/resourceGroup().name/providers/microsoft.insights/actiongroups/wvd-alerts",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "microsoft.insights/scheduledqueryrules",
+            "apiVersion": "2018-04-16",
+            "name": "[parameters('scheduledqueryrules_Error_Events_name')]",
+            "location": "eastus",
+            "properties": {
+                "enabled": "true",
+                "source": {
+                    "query": "union Event, Syslog // Event table stores Windows event records, Syslog stores Linux records\n| where TimeGenerated > ago(1h)\n| where EventLevelName == \"Error\" // EventLevelName is used in the Event (Windows) records\nor SeverityLevel== \"err\" // SeverityLevel is used in Syslog (Linux) records",
+                    "authorizedResources": [],
+                    "dataSourceId": "[parameters('workspaces_externalid')]",
+                    "queryType": "ResultCount"
+                },
+                "schedule": {
+                    "frequencyInMinutes": 5,
+                    "timeWindowInMinutes": 5
+                },
+                "action": {
+                    "severity": "3",
+                    "aznsAction": {
+                        "actionGroup": [
+                            "[parameters('actiongroups_wvd_alerts_externalid')]"
+                        ]
+                    },
+                    "throttlingInMin": 20,
+                    "trigger": {
+                        "thresholdOperator": "GreaterThan",
+                        "threshold": 1
+                    },
+                    "odata.type": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction"
+                }
+            }
+        }
+
+    ]
+}

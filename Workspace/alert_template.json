@@ -1,0 +1,169 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "scheduledqueryrules_Metrics_name": {
+            "defaultValue": "",
+            "type": "String"
+        },
+        "scheduledqueryrules_Error_Events_name": {
+            "defaultValue": "",
+            "type": "String"
+        },
+         "scheduledqueryrules_Evnet_log_warning_name": {
+            "defaultValue": "",
+            "type": "String"
+        },
+        "metricAlerts_Metrics_description": {
+            "type": "SecureString"
+        },
+        "metricAlerts_name": {
+            "defaultValue": "",
+            "type": "String"
+        },
+        "workspaces_externalid": {
+            "defaultValue": "/subscriptions/subscription().subscriptionId/resourceGroups/resourceGroup().name/providers/Microsoft.OperationalInsights/workspaces/mlwvdmsp",
+            "type": "String"
+        },
+        "actiongroups_externalid": {
+            "defaultValue": "/subscriptions/subscription().subscriptionId/resourceGroups/resourceGroup().name/providers/microsoft.insights/actiongroups/",
+            "type": "String"
+        },        
+        "actionGroups_name": {
+            "defaultValue": "",
+            "type": "String"
+        },
+        "workspaceName": {
+            "defaultValue": "",
+            "type": "string"
+        }
+
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "microsoft.insights/actionGroups",
+            "apiVersion": "2019-03-01",
+            "name": "[parameters('actionGroups_name')]",
+            "location": "Global",
+            "tags": {
+                "wvd": "Infrastructure"
+            },
+            "properties": {
+                "groupShortName": "[parameters('actionGroups_name')]",
+                "enabled": true,
+                "emailReceivers": [
+                    {
+                        "name": "teamEmail_-EmailAction-",
+                        "emailAddress": "STELLR.MSPServices@synnex.com",
+                        "useCommonAlertSchema": false
+                    }
+                ],
+                "smsReceivers": [],
+                "webhookReceivers": [],
+                "itsmReceivers": [],
+                "azureAppPushReceivers": [],
+                "automationRunbookReceivers": [],
+                "voiceReceivers": [],
+                "logicAppReceivers": [],
+                "azureFunctionReceivers": []
+            }
+        },
+        {
+            "type": "microsoft.insights/metricAlerts",
+            "apiVersion": "2018-03-01",
+            "name": "[parameters('metricAlerts_name')]",
+            "location": "global",
+            "properties": {
+                "severity": 3,
+                "enabled": true,
+                "scopes": [
+                    "[concat(parameters('workspaces_externalid'), parameters('workspaceName'))]"
+                ],
+                "evaluationFrequency": "PT1M",
+                "windowSize": "PT5M",
+                "criteria": {
+                    "allOf": [
+                        {
+                            "threshold": 100000000,
+                            "name": "Metric1",
+                            "metricNamespace": "Microsoft.OperationalInsights/workspaces",
+                            "metricName": "Average_% Free Space",
+                            "operator": "LessThanOrEqual",
+                            "timeAggregation": "Total",
+                            "criterionType": "StaticThresholdCriterion"
+                        },
+                        {
+                            "threshold": 2,
+                            "name": "Metric2",
+                            "metricNamespace": "Microsoft.OperationalInsights/workspaces",
+                            "metricName": "Average_Current Disk Queue Length",
+                            "operator": "GreaterThan",
+                            "timeAggregation": "Average",
+                            "criterionType": "StaticThresholdCriterion"
+                        },
+                        {
+                            "threshold": 512000000,
+                            "name": "Metric3",
+                            "metricNamespace": "Microsoft.OperationalInsights/workspaces",
+                            "metricName": "Average_Available MBytes Memory",
+                            "operator": "LessThanOrEqual",
+                            "timeAggregation": "Maximum",
+                            "criterionType": "StaticThresholdCriterion"
+                        }
+                    ],
+                    "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+                },
+                "autoMitigate": true,
+                "targetResourceType": "Microsoft.OperationalInsights/workspaces",
+                "actions": [
+                    {
+                        "actionGroupId": "[concat(parameters('actionGroups_externalid'), parameters('actionGroups_name'))]",
+                        "webHookProperties": {}
+                    }
+                ],
+                "description": "[parameters('metricAlerts_Metrics_description')]"
+            }
+        },
+        {
+            "name": "workspace",
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2019-10-01",
+            "properties": {
+                "mode": "Incremental",
+                "templateLink": {
+                    "uri": "https://raw.githubusercontent.com/mlamberty/Lighthouse-MSP/main/Workspace/workspaceconfig.json",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parameters": {
+                    "workspaceName":{
+                        "value": "[parameters('workspaceName')]"
+                    }
+                }
+            }
+        },
+        {
+            "name": "rule",
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2019-10-01",
+            "properties": {
+                "mode": "Incremental",
+                "templateLink": {
+                    "uri": "https://raw.githubusercontent.com/mlamberty/Lighthouse-MSP/main/Workspace/rule_template.json",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parameters": {
+                    "scheduledqueryrules_Metrics_name":{
+                        "value":"[parameters('scheduledqueryrules_Metrics_name')]"
+                    },
+                    "scheduledqueryrules_Error_Events_name":{
+                        "value":"[parameters('scheduledqueryrules_Error_Events_name')]"
+                    },
+                    "scheduledqueryrules_Evnet_log_warning_name":{
+                        "value":"[parameters('scheduledqueryrules_Evnet_log_warning_name')]"
+                    }
+                }
+            }
+        }
+    ]
+}
