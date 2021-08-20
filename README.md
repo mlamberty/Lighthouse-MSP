@@ -1,5 +1,5 @@
 # Lighthouse-MSP
-<<<<<<< HEAD
+<br />
 Files related to Azure Lighthouse deployment
 
 "Lighthouse Onboarding"
